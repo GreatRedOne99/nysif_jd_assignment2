@@ -30,15 +30,35 @@ Backtest Results → Automated Analysis → Executive Reports → Investment Pre
 - **Python**: 3.8 or higher
 - **Memory**: 8GB+ RAM recommended
 - **Storage**: 10GB free space
+- **Git**: (Optional) For cloning repository
 
 ### Installation Steps
 
-#### 1. Download and Extract Project
-- Download **nysif_jd_assignment2.zip**
+#### 1. Get the Project Files
+
+Choose **Option A** (Git Clone - Recommended) or **Option B** (ZIP Download):
+
+**Option A: Clone from GitHub (Recommended)**
+```bash
+# Clone the repository
+git clone https://github.com/GreatRedOne99/nysif_jd_assignment2.git
+
+# Navigate to project directory
+cd nysif_jd_assignment2
+
+# Verify all files are present
+ls -la  # Linux/macOS
+dir     # Windows
+```
+
+**Option B: Download ZIP File**
+- Download **nysif_jd_assignment2.zip** from releases
 - Extract all files to a local directory
+- Navigate to the extracted directory
 - Verify all files are present (see file list below)
 
 #### 2. Get Market Data
+
 **Option A: Fresh Data (Recommended)**
 1. Upload `Google_CoLab_yfinance_downloader.ipynb` to Google Colab
 2. Run all cells in Colab
@@ -49,15 +69,18 @@ Backtest Results → Automated Analysis → Executive Reports → Investment Pre
 - Use the provided `raw_data.parquet` file (backup option)
 
 #### 3. Setup Python Environment
-Open command prompt in project directory and run:
+
+Open command prompt/terminal in project directory and run:
 
 ```bash
 # Create virtual environment
 python -m venv .venv
 
-# Activate environment (Windows)
+# Activate environment
+# Windows:
 .venv\Scripts\activate.bat
-# Or for macOS/Linux: source .venv/bin/activate
+# macOS/Linux:
+source .venv/bin/activate
 
 # Install required packages
 pip install -r requirements.txt
@@ -69,6 +92,15 @@ python -m ipykernel install --user --name=nysif_jd_assign2 --display-name="nysif
 jupyter notebook
 ```
 
+**Git Users: Keep Project Updated**
+```bash
+# Pull latest changes
+git pull origin main
+
+# Check for updates
+git status
+```
+
 ## Complete Workflow: Two-Stage Pipeline
 
 ### Stage 1: Portfolio Construction & Backtesting
@@ -77,7 +109,7 @@ jupyter notebook
 1. Open `jd_assignment2.ipynb` in Jupyter
 2. Click 'Trust' notebook if prompted
 3. Select the "nysif-jd-assign2" kernel
-4. *Important*  :         **Run cells in sequence** - 
+4. **Important**: Run cells in sequence - do not use "Run All"
 5. **Configure Analysis Period** (Cell ~8-9):
    - From Cell 8: Review the Month End Dates array
    - In Cell 9: Set these variables to control analysis scope:
@@ -154,7 +186,7 @@ After Stage 1 completes:
 | File | Purpose |
 |------|---------|
 | **README.md** | 📖 This overview and quick start guide |
-| **user_guide.md** | 💥 Detailed user instructions |
+| **user_guide.md** | 👥 Detailed user instructions |
 | **technical_reference.md** | 🔬 Technical implementation details |
 | **api_documentation.md** | 🔌 Complete API reference |
 | **reference.md** | 📚 MTUM methodology and background |
@@ -236,7 +268,7 @@ After `mtum_analysis.ipynb` completes, you'll also get **presentation-ready mate
                                                        │
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Backtest      │    │   Portfolio     │    │   Portfolio     │
-│   Results       │◀───│   Performance   │◀───│   Optimization  │
+│   Results       │◀────│   Performance   │◀────│   Optimization  │
 │   Storage       │    │   Tracking      │    │   (CVXPY)       │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
@@ -327,7 +359,7 @@ ModuleNotFoundError: No module named 'mtum_analysis_toolkit'
 
 **"No backtest results found" Error**
 ```
-❌ No backtest results directories found!
+⚠ No backtest results directories found!
 ```
 **Solution**: 
 - Run Stage 1 (`jd_assignment2.ipynb`) first to generate results
@@ -335,6 +367,30 @@ ModuleNotFoundError: No module named 'mtum_analysis_toolkit'
 
 **Charts not displaying**
 **Solution**: Add `plt.show()` after plot functions if running in Jupyter
+
+### Git-Specific Issues
+
+**Git Clone Permission Issues**
+```bash
+# If you get permission errors, try:
+git clone https://github.com/GreatRedOne99/nysif_jd_assignment2.git --depth 1
+```
+
+**Keeping Project Updated**
+```bash
+# Check for updates
+git status
+git pull origin main
+
+# If you have local changes, stash them first
+git stash
+git pull origin main
+git stash pop
+```
+
+**Large File Issues**
+- The `raw_data.parquet` file may not be in Git due to size
+- Always run the data download step regardless of installation method
 
 ## Documentation Guide
 
@@ -373,12 +429,27 @@ This system implements concepts from:
 - Refer to `api_documentation.md` for function details
 - Check individual module docstrings for API details
 
+**Contributing via Git**:
+- Fork the repository for your own modifications
+- Create feature branches for significant changes
+- Submit pull requests for improvements
+
 ---
 
 **🚀 Ready to get started?** 
 
+**Option A: Git Clone (Recommended)**
+```bash
+git clone https://github.com/GreatRedOne99/nysif_jd_assignment2.git
+cd nysif_jd_assignment2
+```
+
+**Option B: ZIP Download**
+- Download and extract the ZIP file
+- Navigate to project directory
+
+**Then:**
 1. **First**: Run `jd_assignment2.ipynb` (Stage 1) to generate backtest results
 2. **Then**: Run `mtum_analysis.ipynb` (Stage 2) for professional analysis and reporting
 
 This gives you both the systematic portfolio and professional analysis tools for interviews and presentations!
-
