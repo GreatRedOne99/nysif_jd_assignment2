@@ -52,8 +52,11 @@ dir     # Windows
 ```
 
 **Option B: Google CoLab**
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GreatRedOne99/nysif_jd_assignment2/blob/main/jd_assignment2.ipynb)
+- Open the primary notebook - nysif_jd_assignment2.ipynb - in Google CoLab<br>
 
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GreatRedOne99/nysif_jd_assignment2/blob/main/jd_assignment2.ipynb)
+
+<br>
 **Option C: Download ZIP File**
 - Download **nysif_jd_assignment2.zip** from releases
 - Extract all files to a local directory
