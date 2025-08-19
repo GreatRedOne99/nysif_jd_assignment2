@@ -36,9 +36,15 @@ Backtest Results → Automated Analysis → Executive Reports → Investment Pre
 
 #### 1. Get the Project Files
 
-Choose **Option A** (Git Clone - Recommended) or **Option B** (ZIP Download):
+Choose **Option A** (Google CoLab - Recommended) or **Option B** (Git Clone):
 
-**Option A: Clone from GitHub (Recommended)**
+
+**Option A: Google CoLab**
+- Open the primary notebook - nysif_jd_assignment2.ipynb - in Google CoLab<br>
+
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GreatRedOne99/nysif_jd_assignment2/blob/main/jd_assignment2.ipynb)
+
+**Option B: Clone from GitHub (Recommended)**
 ```bash
 # Clone the repository
 git clone https://github.com/GreatRedOne99/nysif_jd_assignment2.git
@@ -50,18 +56,6 @@ cd nysif_jd_assignment2
 ls -la  # Linux/macOS
 dir     # Windows
 ```
-
-**Option B: Google CoLab**
-- Open the primary notebook - nysif_jd_assignment2.ipynb - in Google CoLab<br>
-
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GreatRedOne99/nysif_jd_assignment2/blob/main/jd_assignment2.ipynb)
-
-<br>
-**Option C: Download ZIP File**
-- Download **nysif_jd_assignment2.zip** from releases
-- Extract all files to a local directory
-- Navigate to the extracted directory
-- Verify all files are present (see file list below)
 
 #### 2. Get Market Data
 
